@@ -1,0 +1,168 @@
+%! Author = sebash
+%! Date = 6/30/22
+
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{amsmath, amssymb}
+\usepackage[makeroom]{cancel}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes, arrows}
+\usepackage{sectsty}
+\usepackage{amssymb}
+
+
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+\newcommand{\DrawBox}[2]{%
+    \begin{tikzpicture}[overlay,remember picture]
+        \draw[->,shorten >=5pt,shorten <=5pt,out=70,in=130,distance=0.5cm,#1] (MarkA.north) to (MarkC.north);
+        \draw[->,shorten >=5pt,shorten <=5pt,out=50,in=140,distance=0.3cm,#2] (MarkA.north) to (MarkB.north);
+    \end{tikzpicture}
+}
+
+\newcommand{\DrawBoxThree}[3]{%
+    \begin{tikzpicture}[overlay,remember picture]
+        \draw[->,shorten >=5pt,shorten <=5pt,out=70,in=130,distance=0.5cm,#1] (MarkA.north) to (MarkC.north);
+        \draw[->,shorten >=5pt,shorten <=5pt,out=50,in=140,distance=0.3cm,#2] (MarkA.north) to (MarkB.north);
+        \draw[->,shorten >=5pt,shorten <=5pt,out=90,in=120,distance=0.7cm,#3] (MarkA.north) to (MarkD.north);
+    \end{tikzpicture}
+}
+\title{Sebastian Campos Homework}
+
+\DeclareMathSizes{12}{30}{16}{12}
+
+\begin{document}
+    \maketitle
+    \noindent
+    \section*{10.1  1 to 25 odd}
+    \subsection*{1 a}
+    \begin{align*}
+        (f \circ g)(x)
+    \end{align*}
+    \begin{align*}
+        f(x) &= 4x + 3 &g(x) &= 2x +5
+    \end{align*}
+    \begin{align*}
+        (f \circ g)(x) &= 4(2x + 5) + 3\\
+        (f \circ g)(x) &= 8x + 20 + 3\\
+        (f \circ g)(x) &= 8x + 23
+    \end{align*}
+    \begin{align*}
+        \boxed{(f \circ g)(x) = 8x + 23}
+    \end{align*}
+
+    \subsection*{1 b}
+    \begin{align*}
+    (g \circ f)(x)
+    \end{align*}
+    \begin{align*}
+        f(x) &= 4x + 3 &g(x) &= 2x +5
+    \end{align*}
+    \begin{align*}
+        (g \circ f)(x) &= 2(4x + 3) + 5\\
+        (g \circ f)(x) &= 8x + 6 + 5\\
+        (g \circ f)(x) &= 8x + 11
+    \end{align*}
+    \begin{align*}
+        \boxed{(g \circ f)(x) = 8x + 11}
+    \end{align*}
+
+    \subsection*{3 a}
+    \begin{align*}
+    (f \circ g)(x)
+    \end{align*}
+    \begin{align*}
+        f(x) &= 6x -5  &g(x) &= 4x +1
+    \end{align*}
+    \begin{align*}
+    (f \circ g)(x) &= 6(4x + 1) -5\\
+    (f \circ g)(x) &= 24x + 6 - 5\\
+    (f \circ g)(x) &= 24x + 1
+    \end{align*}
+    \begin{align*}
+        \boxed{(f \circ g)(x) = 24x + 1}
+    \end{align*}
+
+    \subsection*{3 b}
+    \begin{align*}
+    (g \circ f)(x)
+    \end{align*}
+    \begin{align*}
+        f(x) &= 6x -5  &g(x) &= 4x +1
+    \end{align*}
+    \begin{align*}
+    (g \circ f)(x) &= 4(6x -5) +1\\
+    (g \circ f)(x) &= 24x -20 +1 \\
+    (g \circ f)(x) &= 24x -19
+    \end{align*}
+    \begin{align*}
+        \boxed{(g \circ f)(x) = 24x -19}
+    \end{align*}
+
+    \subsection*{5 a}
+    \begin{align*}
+    (f \circ g)(x)
+    \end{align*}
+    \begin{align*}
+        f(x) &= 3x  &g(x) &= 2x^2 - 3x
+    \end{align*}
+    \begin{align*}
+    (f \circ g)(x) &= 3(2x^2 - 3x)\\
+    (f \circ g)(x) &= 6x^2 - 9x\\
+    \end{align*}
+    \begin{align*}
+        \boxed{(f \circ g)(x) = 6x^2 - 9x}
+    \end{align*}
+
+    \subsection*{5 b}
+    \begin{align*}
+    (g \circ f)(x)
+    \end{align*}
+    \begin{align*}
+        f(x) &= 3x  &g(x) &= 2x^2 - 3x
+    \end{align*}
+    \begin{align*}
+    (g \circ f)(x) &= 2(3x)^2 - 3(3x)\\
+    (g \circ f)(x) &= 18x^2 - 9x \\
+    \end{align*}
+    \begin{align*}
+        \boxed{(g \circ f)(x) = 18x^2 - 9x}
+    \end{align*}
+
+    \subsection*{7 a}
+    \begin{align*}
+    (f \circ g)(x)
+    \end{align*}
+    \begin{align*}
+        f(x) &= 2x - 1  &g(x) &= x^2 + 2
+    \end{align*}
+    \begin{align*}
+    (f \circ g)(x) &= 2(x^2 +2) - 1\\
+    (f \circ g)(x) &= 2x^2 + 4 - 1\\
+    (f \circ g)(x) &= 2x^2 + 3
+    \end{align*}
+    \begin{align*}
+        \boxed{(f \circ g)(x) = 2x^2 + 3 }
+    \end{align*}
+
+    \subsection*{7 b}
+    \begin{align*}
+    (g \circ f)(x)
+    \end{align*}
+    \begin{align*}
+        f(x) &= 2x - 1  &g(x) &= x^2 + 2
+    \end{align*}
+    \begin{align*}
+    (g \circ f)(x) &= (2x - 1)^2 + 2\\
+    (g \circ f)(x) &= (2x - 1)(2x - 1) + 2\\
+    (g \circ f)(x) &= 4x^2 - 2x - 2x +1 + 2\\
+    (g \circ f)(x) &= 4x^2 - 4x +3 \\
+    \end{align*}
+    \begin{align*}
+        \boxed{(g \circ f)(x) = 4x^2 - 4x +3}
+    \end{align*}
+
+
+
+\end{document}
